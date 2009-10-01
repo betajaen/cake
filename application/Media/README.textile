@@ -1,0 +1,11 @@
+h1. License
+
+The following files are copyright to Robin Southern and intended for the use of Cake only. DO NOT RE-DISTRIBUTE WITHOUT EXPRESSED PERMISSION
+
+# cube.png
+# cube.1m.mesh
+# cc.material
+# nx.floor.png
+
+
+Any other files in the Cake media folder is copyright to the respected authors.

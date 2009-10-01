@@ -1,0 +1,16 @@
+import * from "00diffuse.material"
+import * from "00diffuse.material"
+
+material refPlane : diffuse_template
+{
+    set_texture_alias ambient_tex nx.floor.png
+    set_texture_alias diffuse_tex nx.floor.png
+}
+
+material cube-from-nxogre.org : diffuse_template
+{
+    set_texture_alias ambient_tex cube.png
+    set_texture_alias diffuse_tex cube.png
+}
+
+
