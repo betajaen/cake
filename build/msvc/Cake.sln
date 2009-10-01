@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CakeOpenGL", "CakeOpenGL.vcproj", "{64723E0C-7FB8-45EB-B7F4-F20FA777C193}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CakeOgre", "CakeOgre.vcproj", "{7192B2B8-8975-45C3-A8E3-E65453E6254C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64723E0C-7FB8-45EB-B7F4-F20FA777C193}.Debug|Win32.ActiveCfg = Debug|Win32
+		{64723E0C-7FB8-45EB-B7F4-F20FA777C193}.Debug|Win32.Build.0 = Debug|Win32
+		{64723E0C-7FB8-45EB-B7F4-F20FA777C193}.Release|Win32.ActiveCfg = Release|Win32
+		{64723E0C-7FB8-45EB-B7F4-F20FA777C193}.Release|Win32.Build.0 = Release|Win32
+		{7192B2B8-8975-45C3-A8E3-E65453E6254C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7192B2B8-8975-45C3-A8E3-E65453E6254C}.Debug|Win32.Build.0 = Debug|Win32
+		{7192B2B8-8975-45C3-A8E3-E65453E6254C}.Release|Win32.ActiveCfg = Release|Win32
+		{7192B2B8-8975-45C3-A8E3-E65453E6254C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
