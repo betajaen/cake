@@ -32,7 +32,7 @@ void main()
  float nextSecond = 0;
  unsigned int currentSecond = 0;
  
- Vec3 direction(1.1,0,0);
+ Vec3 direction(1, 0, 0);
  float walkSpeed = 1.0f;
  
  FixedTimeStep ts(gScene);
