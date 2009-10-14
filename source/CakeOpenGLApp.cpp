@@ -31,8 +31,6 @@ using namespace NxOgre;
 void CakeOpenGL::createScene()
 {
  
- NxOgre::Mesh* cone = NxOgre::MeshManager::getSingleton()->load("file://cone.nxs");
- 
  Material* default_material = mScene->getMaterial(0);
  default_material->setStaticFriction(0.5f);
  default_material->setDynamicFriction(0.5f);

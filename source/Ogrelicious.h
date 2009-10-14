@@ -1285,6 +1285,8 @@ namespace Ogrelicious
     SmartWindow&  watchKeys(int keyCodeA, int keyCodeB, int keyCodeC, int keyCodeD, int keyCodeE, int keyCodeF, int keyCodeG, const _Callback&);
     //! Alternate to onKeyPressed/onKeyReleased for when a specific key needs to be watched.
     SmartWindow&  watchKeys(int keyCodeA, int keyCodeB, int keyCodeC, int keyCodeD, int keyCodeE, int keyCodeF, int keyCodeG, int keyCodeI, const _Callback&);
+    //! Alternate to onKeyPressed/onKeyReleased for when a specific key needs to be watched.
+    SmartWindow&  watchKeys(int keyCodeA, int keyCodeB, int keyCodeC, int keyCodeD, int keyCodeE, int keyCodeF, int keyCodeG, int keyCodeI, int keyCodeJ, const _Callback&);
     //! onLoad window property. Accessible before the window has been created.
     SmartEvent<_onLoad> onLoad;
     //! onUnload window property. Accessible after the window has been created.

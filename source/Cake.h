@@ -54,6 +54,7 @@ class Cake : public NxOgre::Callback
 
    NxOgre::SceneDescription scene_description;
    scene_description.mGravity.set(0,-9.8f,0);
+   scene_description.mMaxTimeStep = _1_30;
    
    mScene = mWorld->createScene(scene_description);
    

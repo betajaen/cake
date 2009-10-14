@@ -1,4 +1,4 @@
-/** File: OpenGLApp.cpp
+/** File: CakeOgreApp.cpp
     Created on: 06-Sept-09
     Author: Robin Southern "betajaen"
 
@@ -35,6 +35,13 @@ void CakeOGRE::createScene()
  default_material->setStaticFriction(0.5f);
  default_material->setDynamicFriction(0.5f);
  
+ //mRenderSystem->createBody(new Box(3), Vec3(0, 6, 0), "cube.1m.mesh")->getSceneNode()->setScale(3,3,3);
+ 
+ NxOgre::FluidDescription desc;
+ desc.mSimulationMethod = Enums::FluidSimulationMethod_NoParticleInteraction;
+ 
+ mRenderSystem->createFluid(desc);
+
 }
 
 void CakeOGRE::destroyScene()
@@ -47,6 +54,13 @@ void CakeOGRE::onFrame(float deltaTime)
 
 void CakeOGRE::onKeyEvent(OIS::KeyCode key)
 {
+ if (key == OIS::KC_F1)
+ {
+  if (mRenderSystem->hasDebugVisualisation())
+   mRenderSystem->setVisualisationMode(Enums::VisualDebugger_ShowNone);
+  else
+   mRenderSystem->setVisualisationMode(Enums::VisualDebugger_ShowAll);
+ }
 }
 
 void CakeOGRE::doConfig()

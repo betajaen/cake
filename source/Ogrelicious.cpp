@@ -1765,6 +1765,28 @@ SmartWindow& SmartWindow::watchKeys(int keyCodeA, int keyCodeB, int keyCodeC, in
  return *this;
 }
 
+SmartWindow& SmartWindow::watchKeys(int keyCodeA, int keyCodeB, int keyCodeC, int keyCodeD, int keyCodeE, int keyCodeF, int keyCodeG, int keyCodeI, int keyCodeJ, const _Callback& callback)
+{
+ SmartInputSystem::Instance()->watchKey(mWindow->mWindow, mEvents->mHandle, keyCodeA);
+ EventSystem::Instance()->addFunctor(mEvents->mHandle, keyCodeA, callback.mFunctor);
+ SmartInputSystem::Instance()->watchKey(mWindow->mWindow, mEvents->mHandle, keyCodeB);
+ EventSystem::Instance()->addFunctor(mEvents->mHandle, keyCodeB, callback.mFunctor);
+ SmartInputSystem::Instance()->watchKey(mWindow->mWindow, mEvents->mHandle, keyCodeC);
+ EventSystem::Instance()->addFunctor(mEvents->mHandle, keyCodeC, callback.mFunctor);
+ SmartInputSystem::Instance()->watchKey(mWindow->mWindow, mEvents->mHandle, keyCodeD);
+ EventSystem::Instance()->addFunctor(mEvents->mHandle, keyCodeD, callback.mFunctor);
+ SmartInputSystem::Instance()->watchKey(mWindow->mWindow, mEvents->mHandle, keyCodeE);
+ EventSystem::Instance()->addFunctor(mEvents->mHandle, keyCodeE, callback.mFunctor);
+ SmartInputSystem::Instance()->watchKey(mWindow->mWindow, mEvents->mHandle, keyCodeF);
+ EventSystem::Instance()->addFunctor(mEvents->mHandle, keyCodeF, callback.mFunctor);
+ SmartInputSystem::Instance()->watchKey(mWindow->mWindow, mEvents->mHandle, keyCodeG);
+ EventSystem::Instance()->addFunctor(mEvents->mHandle, keyCodeG, callback.mFunctor);
+ SmartInputSystem::Instance()->watchKey(mWindow->mWindow, mEvents->mHandle, keyCodeI);
+ EventSystem::Instance()->addFunctor(mEvents->mHandle, keyCodeI, callback.mFunctor);
+ SmartInputSystem::Instance()->watchKey(mWindow->mWindow, mEvents->mHandle, keyCodeJ);
+ EventSystem::Instance()->addFunctor(mEvents->mHandle, keyCodeJ, callback.mFunctor);
+ return *this;
+}
 void SmartWindow::_events(bool exclusiveMouse)
 {
  onDraw._   = mEvents;

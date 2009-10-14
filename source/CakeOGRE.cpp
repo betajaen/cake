@@ -175,6 +175,7 @@ void CakeOGRE::createRenderer()
                    mKeyConfig.CameraDown,
                    OIS::KC_F10,
                    OIS::KC_F9,
+                   OIS::KC_F8,
                    _Callback(this, &CakeOGRE::onCameraKeysDown)
                   );
  
@@ -200,7 +201,7 @@ void CakeOGRE::onFrameEvent(const Ogre::Real& deltaTime)
  //for (unsigned int i=0; i < 16000000;i++); // Mr Sleep.
 
  std::stringstream ss;
- ss << "CakeOGRE - Gfx: " << mWindow->getAverageFPS() << "Hz, Acm: " << 1 / mScene->getTimeStep().mModified << "Hz, SST: " << mScene->getTimeStep().mSubSteps << ", ACT:" << 1 / mScene->getTimeStep().mActual << ", Alpha:" << mScene->getTimeStep().mAlpha;
+ ss << "CakeOGRE - Gfx: " << mWindow->getAverageFPS() << "Hz, Acm: " << mScene->getTimeStep().getAccumulator() << "s, SST: " << mScene->getTimeStep().getSubSteps() << ", Mod:" << 1 / mScene->getTimeStep().getModified() << ", Alpha:" << mScene->getTimeStep().getAlpha();
  mWindow.title(ss.str());
 
  onFrame(deltaTime);
@@ -281,4 +282,9 @@ void CakeOGRE::onCameraKeysDown(Ogrelicious::KeyEvent* keyEvent)
   }
  }
  
+ if (keyEvent->keyPressed == OIS::KC_F8)
+ {
+  mRenderSystem->createBody(new NxOgre::Box(1), NxOgre::Vec3(0, 9.5, 0), "cube.1m.mesh");
+ }
+
 }

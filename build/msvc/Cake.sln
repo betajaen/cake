@@ -5,6 +5,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CakeOpenGL", "CakeOpenGL.vc
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CakeOgre", "CakeOgre.vcproj", "{7192B2B8-8975-45C3-A8E3-E65453E6254C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CakeCLI", "CakeCLI.vcproj", "{D6DB6771-89DE-4814-92BD-B5E3AFEEADE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -19,6 +21,10 @@ Global
 		{7192B2B8-8975-45C3-A8E3-E65453E6254C}.Debug|Win32.Build.0 = Debug|Win32
 		{7192B2B8-8975-45C3-A8E3-E65453E6254C}.Release|Win32.ActiveCfg = Release|Win32
 		{7192B2B8-8975-45C3-A8E3-E65453E6254C}.Release|Win32.Build.0 = Release|Win32
+		{D6DB6771-89DE-4814-92BD-B5E3AFEEADE7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D6DB6771-89DE-4814-92BD-B5E3AFEEADE7}.Debug|Win32.Build.0 = Debug|Win32
+		{D6DB6771-89DE-4814-92BD-B5E3AFEEADE7}.Release|Win32.ActiveCfg = Release|Win32
+		{D6DB6771-89DE-4814-92BD-B5E3AFEEADE7}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
