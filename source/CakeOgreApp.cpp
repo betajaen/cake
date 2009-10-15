@@ -28,20 +28,49 @@
 
 using namespace NxOgre;
 
+Fluid* fluid;
+FluidEmitter* emitter;
+
+Ogre::ParticleSystem* frank;
+
 void CakeOGRE::createScene()
 {
- 
+  
  Material* default_material = mScene->getMaterial(0);
  default_material->setStaticFriction(0.5f);
  default_material->setDynamicFriction(0.5f);
  
  //mRenderSystem->createBody(new Box(3), Vec3(0, 6, 0), "cube.1m.mesh")->getSceneNode()->setScale(3,3,3);
- 
+  
  NxOgre::FluidDescription desc;
- desc.mSimulationMethod = Enums::FluidSimulationMethod_NoParticleInteraction;
+ desc.mMaxParticles = 15000;
+ desc.mKernelRadiusMultiplier = 2.0f;
+ desc.mRestParticlesPerMetre = 7.0f;
+ desc.mMotionLimitMultiplier = 3.0f;
+ desc.mPacketSizeMultiplier = 8;
+ desc.mCollisionDistanceMultiplier = 0.1f;
+ desc.mStiffness = 50.0f;
+ desc.mViscosity = 40.0f;
+ desc.mRestDensity = 1000.0f;
+ desc.mSimulationMethod = Enums::FluidSimulationMethod_SPH;
+ desc.mFlags |= Enums::FluidFlags_Hardware;
+ desc.mFlags |= Enums::FluidFlags_DisableGravity;
+  
+ fluid = mRenderSystem->createFluid(desc, "Gas", OGRE3DFluidType_OgreParticle);
  
- mRenderSystem->createFluid(desc);
-
+ FluidEmitterDescription edesc;
+ edesc.mPose.set(0, 2, 0);
+ edesc.mParticleLifetime = 10.0;
+ edesc.mRate = 300;
+ edesc.mType = Enums::FluidEmitterType_Pressure;
+ edesc.mRandomAngle = 4.5f;
+ edesc.mRandomPosition.set(0.05f, 0.05f, 1.0f);
+ edesc.mReplusionCoefficient = 0.8f;
+ edesc.mDimensionX = 1.0f;
+ edesc.mDimensionY = 1.0f;
+ 
+ emitter = fluid->createEmitter(edesc);
+ 
 }
 
 void CakeOGRE::destroyScene()
@@ -61,6 +90,10 @@ void CakeOGRE::onKeyEvent(OIS::KeyCode key)
   else
    mRenderSystem->setVisualisationMode(Enums::VisualDebugger_ShowAll);
  }
+ 
+ if (key == OIS::KC_8)
+  frank->createParticle();
+ 
 }
 
 void CakeOGRE::doConfig()

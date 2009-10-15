@@ -13,4 +13,21 @@ material cube-from-nxogre.org : diffuse_template
     set_texture_alias diffuse_tex cube.png
 }
 
+material Gas
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      scene_blend alpha_blend
+      depth_write off
+      
+      texture_unit
+      {
+        texture Gas.png  
+      }
+    }
+  }
 
+}

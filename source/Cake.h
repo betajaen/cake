@@ -49,17 +49,17 @@ class Cake : public NxOgre::Callback
   {
    
    mWorld = NxOgre::World::createWorld();
+   mWorld->getRemoteDebugger()->connect();
    
    mTimeController = NxOgre::TimeController::getSingleton();
 
    NxOgre::SceneDescription scene_description;
    scene_description.mGravity.set(0,-9.8f,0);
-   scene_description.mMaxTimeStep = _1_30;
    
    mScene = mWorld->createScene(scene_description);
    
    mScene->createSceneGeometry(new NxOgre::PlaneGeometry(0, NxOgre::Vec3(0, 1, 0)));
-
+  
   }
   
   // Destroy NxOgre World and Scene and uninitialise PhysX.
